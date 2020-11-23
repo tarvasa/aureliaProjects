@@ -16,7 +16,8 @@ describe('Stage App Component', () => {
   it('should render message', done => {
     component.create(bootstrap).then(() => {
       const view = component.element;
-      expect(view.textContent.trim()).toBe('Hello World!');
+      //expect(view.textContent.trim()).toBe('Hello World!');
+      expect(view.message).toBe('Hello World!');
       done();
     }).catch(e => {
       fail(e);
