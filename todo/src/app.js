@@ -22,7 +22,7 @@ export class App {
 
     this.router = router;
   }*/
-  addTodo() {
+  /*addTodo() {
     if(this.todoDescription) {
       this.todos.push({
         title: this.todoDescription,
@@ -30,6 +30,6 @@ export class App {
       });
       this.todoDescription = '';
     }
-  }
+  }*/
   
 }

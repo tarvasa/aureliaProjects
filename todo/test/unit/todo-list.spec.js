@@ -28,7 +28,7 @@ describe('TodoList', () => {
 
   it('should check checkboxes for completed todos', done => {
     component.create(bootstrap).then(() => {
-      const checkboxes = document.querySelectorAll('input');
+      const checkboxes = document.querySelectorAll('.checkbox');
       expect(checkboxes[2].checked).toBe(true);
       done();
     }).catch(e => {
