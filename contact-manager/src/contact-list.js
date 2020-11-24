@@ -1,13 +1,14 @@
 import {EventAggregator} from 'aurelia-event-aggregator';
 import {WebAPI} from './web-api';
 import {ContactUpdated, ContactViewed} from './messages';
-import {inject} from 'aurelia-framework';
+import {inject, bindable } from 'aurelia-framework';
 
 @inject(WebAPI, EventAggregator)
 export class ContactList {
   constructor(api, ea) {
     this.api = api;
     this.contacts = [];
+    //@bindable this.contacts;
 
     ea.subscribe(ContactViewed, msg => this.select(msg.contact));
     ea.subscribe(ContactUpdated, msg => {

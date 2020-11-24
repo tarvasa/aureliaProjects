@@ -1,4 +1,4 @@
-/*import {bootstrap} from 'aurelia-bootstrapper';
+import {bootstrap} from 'aurelia-bootstrapper';
 import {StageComponent} from 'aurelia-testing';
 import {PLATFORM} from 'aurelia-pal';
 
@@ -24,4 +24,3 @@ describe('Stage App Component', () => {
     });
   });
 });
-*/
