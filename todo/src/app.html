@@ -2,7 +2,6 @@
 <require from="./resources/elements/todo-list"></require>
 <require from="./resources/elements/addtodo"></require>
   <h1>${heading}</h1>
-<!--  <router-view></router-view> -->
   <form submit.trigger="addTodo()">
     <input type="text" value.bind="todoDescription">
     <button type="submit" disabled.bind="!todoDescription">Add Todo</button>
