@@ -1,0 +1,8 @@
+<template>
+ <form submit.trigger="addTodo()">
+    <input type="text" value.bind="todoDescription">
+    <button type="submit" disabled.bind="!todoDescription">Add Todo</button>
+  </form>
+
+</template>
+

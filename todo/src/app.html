@@ -1,5 +1,11 @@
 <template>
 <require from="./resources/elements/todo-list"></require>
-  <h1>${message}</h1>
+<require from="./resources/elements/addtodo"></require>
+  <h1>${heading}</h1>
+<!--  <router-view></router-view> -->
+  <form submit.trigger="addTodo()">
+    <input type="text" value.bind="todoDescription">
+    <button type="submit" disabled.bind="!todoDescription">Add Todo</button>
+  </form>
   <todo-list todos.bind="todos"></todo-list>
 </template>
