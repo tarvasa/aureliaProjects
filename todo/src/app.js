@@ -8,16 +8,5 @@ export class App {
       { title: 'Wash the dishes', done: true },
       { title: 'Take the garbage', done: false }
     ];
-  }
-
-  addTodo() {
-    if(this.todoDescription) {
-      this.todos.push({
-        title: this.todoDescription,
-        done: false
-      });
-      this.todoDescription = '';
-    }
-  }
-  
+  }  
 }
