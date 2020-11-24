@@ -1,4 +1,14 @@
-import {bootstrap} from 'aurelia-bootstrapper';
+import { exportAllDeclaration } from '../../../../../AppData/Local/Microsoft/TypeScript/4.0/node_modules/@babel/types/lib/index';
+import { italic } from '../../../../../AppData/Local/Microsoft/TypeScript/4.0/node_modules/chalk/index';
+import { App } from '../../src/app';
+
+describe('the app', () => {
+  it('says hello', () => {
+    expect(new App().message).toBe('Hello World!');
+  });
+});
+
+/*import {bootstrap} from 'aurelia-bootstrapper';
 import {StageComponent} from 'aurelia-testing';
 import {PLATFORM} from 'aurelia-pal';
 
@@ -25,3 +35,4 @@ describe('Stage App Component', () => {
     });
   });
 });
+*/
