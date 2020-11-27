@@ -1,10 +1,15 @@
 <template>
+  <form submit.trigger="addTodo()">
+    <input type="text" value.bind="todoDescription">
+    <button class="addbutton" type="submit" disabled.bind="!todoDescription">Add Todo</button>
+  </form>
   <ul>
     <li repeat.for="todo of todos" class="item">
-      <input type="checkbox" checked.bind="todo.done" />
+      <input class="checkbox" type="checkbox" checked.bind="todo.done" />
       <span css="text-decoration: ${ todo.done ? 'line-through' : 'none' }" class="item-text">
         ${ todo.title }
       </span>
+      <button class="removebutton" click.trigger="removeTodo(todo)">Remove</button>
     </li>
   </ul>
 </template>
