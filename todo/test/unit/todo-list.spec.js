@@ -1,5 +1,6 @@
 import { StageComponent } from 'aurelia-testing';
 import { bootstrap } from 'aurelia-bootstrapper';
+import { App } from '../../src/app';
 
 describe('TodoList', () => {
   let component;
@@ -84,22 +85,54 @@ describe('TodoList', () => {
       console.log(e.toString());
     });
   })
-
- /* it('should add a todo', done => {
-    component.create(bootstrap).then(() => {
-      let todoDescription = 'Item 4';
-      //todos.addTodo();
-      expect(functions.addTodo).toBeDefined();
-      todos.addTodo();
-      expect(todos.length).toBe(3);
-      //expect(todos.length).toBe(3);
+/*
+  it('should click', done => {
+    component.manuallyHandleLifecycle().create(bootstrap)
+    .then(() => {
+      const formElement = document.querySelector('.addbutton');
+      document.querySelector('#todo-description').value= 'seminaari';
+      formElement.click();
+    })
+    .then(() => {
+      const listElements = document.querySelectorAll('.item-text');
+      expect(listElements[3].innerHTML.trim()).toBe('seminaari');
       done();
     }).catch(e => {
       console.log(e.toString());
-    });
+    });*/
+    /* component.create(bootstrap).then(() => {
+      //component.manuallyHandleLifecycle().create(bootstrap)
+      const formElement = document.querySelector('.addbutton');
+      document.querySelector('#todo-description').value= 'seminaari';
+      formElement.click();
+      const listElements = document.querySelectorAll('.item-text');
+      expect(listElements[3].innerHTML.trim()).toBe('seminaari');
+      done();
+    }).catch(e => {
+      console.log(e.toString());
+    }); 
   })*/
 
- /* it('should delettodo', done => {
+  /*it('should add a todo', done => {
+    //let app = new App();
+    //app.addTodo();
+    console.log(JSON.stringify(component));
+    /* component.create(bootstrap).then(() => {
+      console.log(Object.keys(component));
+      let todoDescription = 'Item 4';
+      let addItem = component.addTodo();
+      //todos.addTodo();
+      //expect(functions.addTodo).toBeDefined();
+      //todos.addTodo();
+      addItem();
+      expect(todos.length).toBe(3);
+      done();
+    }).catch(e => {
+      console.log(e.toString());
+    });  
+  })*/
+
+ /* it('should delete todo', done => {
     component.create(bootstrap).then(() => {
       
       todos.removeTodo();
