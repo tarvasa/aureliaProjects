@@ -1,7 +1,7 @@
 <template>
   <form submit.trigger="addTodo()">
     <input type="text" value.bind="todoDescription">
-    <button type="submit" disabled.bind="!todoDescription">Add Todo</button>
+    <button class="addbutton" type="submit" disabled.bind="!todoDescription">Add Todo</button>
   </form>
   <ul>
     <li repeat.for="todo of todos" class="item">
@@ -9,7 +9,7 @@
       <span css="text-decoration: ${ todo.done ? 'line-through' : 'none' }" class="item-text">
         ${ todo.title }
       </span>
-      <button click.trigger="removeTodo(todo)">Remove</button>
+      <button class="removebutton" click.trigger="removeTodo(todo)">Remove</button>
     </li>
   </ul>
 </template>

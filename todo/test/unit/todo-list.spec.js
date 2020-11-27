@@ -15,6 +15,16 @@ describe('TodoList', () => {
     .inView('<todo-list todos.bind="todos"></todo-list>')
     .boundTo({ todos })
   })
+  
+  it('should render Add Todo -button', done => {
+    component.create(bootstrap).then(() => {
+      const formElement = document.querySelector('.addbutton');
+      expect(formElement.innerHTML).toBe('Add Todo');
+      done();
+    }).catch(e => {
+      console.log(e.toString());
+    });
+  })
 
   it('should render the todos', done => {
     component.create(bootstrap).then(() => {
@@ -40,6 +50,16 @@ describe('TodoList', () => {
     component.create(bootstrap).then(() => {
       const listElements = document.querySelectorAll('.item-text');
       expect(listElements[2].style.textDecoration).toBe('line-through');
+      done();
+    }).catch(e => {
+      console.log(e.toString());
+    });
+  })
+
+  it('should render Remove Todo button', done => {
+    component.create(bootstrap).then(() => {
+      const listElements = document.querySelectorAll('.removebutton');
+      expect(listElements[2].innerHTML).toBe('Remove');
       done();
     }).catch(e => {
       console.log(e.toString());
